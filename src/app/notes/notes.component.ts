@@ -9,6 +9,7 @@ import {Notes} from './notes';
 export class NotesComponent implements OnInit {
   @ViewChild('notepad') notepad:ElementRef;
   @ViewChild('header') header:ElementRef;
+  @Input() search: string;
   notes: Notes = {
     heading :'Enter your title here',
     content : 'Enter your text here'
