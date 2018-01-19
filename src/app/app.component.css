@@ -1,0 +1,11 @@
+.app-container{
+    padding:0;
+    height:100vh;
+    background: #b2dce7;
+}
+.header{
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
+    -mox-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
+    text-align: center;
+}

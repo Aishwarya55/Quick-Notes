@@ -1,0 +1,19 @@
+.center-div{
+    height:87vh;
+    background: #eefcff;
+    border-radius: 3px;
+}
+.notepad-content h6{
+    height:calc(100% - 40px);
+    max-height: calc(100% - 40px);
+    overflow:auto;
+}
+.notepad-content{
+    padding: 10px 0;
+}
+.notepad-heading{
+    height: 40px;
+    margin: 0 -15px;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ccc
+}
