@@ -50,7 +50,13 @@ export class NotesComponent implements OnInit {
       }
     }
   }
-
+  searchText() : void{
+    if(this.notes.content !== 'Enter your text here'){
+      this.notes.content = this.notes.content.replace(new RegExp( "<span class='highlight'>" , 'g'), "");
+      this.notes.content = this.notes.content.replace(new RegExp( "</span>" , 'g'), "");
+      this.notes.content = this.notes.content.replace(new RegExp( this.search , 'g'), "<span class='highlight'>"+this.search+"</span>");
+    }
+  }
   constructor() { }
 
   ngOnInit() {

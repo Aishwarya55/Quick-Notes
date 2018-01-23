@@ -13,7 +13,7 @@
       </div> 
     </div>
     <div class="col-md-3 col-lg-3">
-      <input type="text" [(ngModel)]="search" placeholder="search">
+      <input type="text" [(ngModel)]="search" placeholder="search" (ngModelChange)="searchText()">
     </div>
   </div>
 </div>

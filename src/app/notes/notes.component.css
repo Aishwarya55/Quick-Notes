@@ -1,6 +1,6 @@
 .center-div{
     height:87vh;
-    background: #eefcff;
+    background: #EFEFEF;
     border-radius: 3px;
 }
 .notepad-content h6{
@@ -16,4 +16,20 @@
     margin: 0 -15px;
     padding: 10px 15px;
     border-bottom: 1px solid #ccc
+}
+input[type=text]{
+    border-radius: 16px;
+    box-shadow: none;
+    border-width: 0;
+    padding: 3px 10px;
+    border: 2px solid #BDD4DE;
+}
+
+input[type=text]:focus{
+    outline: none;
+    border-color: #3F5765;
+    box-shadow: 0 0 10px #3F5765;
+}
+:host ::ng-deep .highlight{
+    background: #FFFF00;
 }

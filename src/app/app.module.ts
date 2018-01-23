@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 
 @NgModule({
@@ -15,7 +15,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
