@@ -17,14 +17,14 @@ export class NotesComponent implements OnInit {
   onBlur(type: string): void{
     if(type === "content"){
       console.log(this.notepad.nativeElement.innerHTML);
-      if(this.notepad.nativeElement.innerHTML === '')
+      if(this.notepad.nativeElement.innerHTML === '<br>')
         this.notes.content = 'Enter your text here';
       else{
         this.notes.content= this.notepad.nativeElement.innerHTML;
       }
     }
   else{
-    if(this.header.nativeElement.innerHTML === '')
+    if(this.header.nativeElement.innerHTML === '<br>' || this.header.nativeElement.innerHTML === '')
        this.notes.heading = 'Enter your title here';
     else{
       this.notes.heading= this.header.nativeElement.innerHTML;
@@ -36,7 +36,7 @@ export class NotesComponent implements OnInit {
     console.log(type);
     if(type === "content"){  
       if(this.notepad.nativeElement.innerHTML === 'Enter your text here')
-       this.notes.content = '';
+       this.notes.content = '<br>';
       else{
       this.notes.content = this.notepad.nativeElement.innerHTML;
       }
@@ -44,7 +44,7 @@ export class NotesComponent implements OnInit {
     else{
       console.log("yess");
       if(this.header.nativeElement.innerHTML === 'Enter your title here')
-       this.notes.heading = '';
+       this.notes.heading = '<br>';
       else{
       this.notes.heading = this.header.nativeElement.innerHTML;
       }
