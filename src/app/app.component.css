@@ -7,10 +7,12 @@
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
     -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
     -mox-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
-    text-align: center;
-}
-.header h4{
-    padding: 16px;
     background: #2B3A42;
+}
+.header span{
+    padding: 16px;
     color: #fff;
+    height: 54px;
+    max-height: 54px;
+    font-size: 16px
 }

@@ -1,7 +1,11 @@
+.notes-component{
+    height : calc(100% - 54px);
+}
 .center-div{
     height:87vh;
     background: #EFEFEF;
     border-radius: 3px;
+    margin: 16px
 }
 .notepad-content h6{
     height:calc(100% - 40px);
@@ -22,13 +26,14 @@ input[type=text]{
     box-shadow: none;
     border-width: 0;
     padding: 3px 10px;
-    border: 2px solid #BDD4DE;
+    border: 1px solid #BDD4DE;
 }
 
 input[type=text]:focus{
     outline: none;
     border-color: #3F5765;
     box-shadow: 0 0 10px #3F5765;
+    transition: 0.2s ease all;
 }
 :host ::ng-deep .highlight{
     background: #FFFF00;
