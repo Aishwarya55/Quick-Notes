@@ -4,13 +4,15 @@ import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { FormsModule } from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotesComponent
+    NotesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
