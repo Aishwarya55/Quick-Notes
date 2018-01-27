@@ -1,0 +1,23 @@
+.bar span{
+    padding:10px;
+    cursor: pointer;
+}
+.bar i{
+    font-size: 16px;
+    color: #ccc;
+}
+.bar{
+    background: #fff
+}
+.gridcontent-container .header, .gridcontent-container .body{
+    padding:8px;
+}
+.gridcontent-container{
+    height: 120px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);
+}
+.partitions{
+    padding:12px
+}

@@ -1,4 +1,4 @@
 export class Notes {
-    heading : string;
-    content : string;
+    heading : String;
+    content : String;
 }

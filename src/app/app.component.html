@@ -4,20 +4,20 @@
     <span class="pull-left">
     Quick Notes
     </span>
-    <nav class="navbar navbar-toggleable-md pull-right" style="padding:0">
-      <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="navbar navbar-expand-sm pull-right" style="padding:0">
+    
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" routerLink="/notes"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            <a class="nav-link"  routerLink="/dashboard" (click)="open('home')"><span style="padding: 8px; border-radius: 50%;" [style.background-color]="isSelected === 'home' ? '#3D5A80' : 'transparent'"><i class="fa fa-home" aria-hidden="true" ></i></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-list-alt" aria-hidden="true"></i></a>
+            <a class="nav-link" routerLink="/notes" (click)="open('note')"> <span style="padding: 10.5px 6px 5.5px 9.5px; border-radius: 50%; position:relative; top:2px" [style.background-color]="isSelected === 'note' ? '#3D5A80' : 'transparent'"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-cog" aria-hidden="true"></i></a>
+            <a class="nav-link" routerLink="/dashboard" (click)="open('list')"><span span style="padding: 8px 9.5px; border-radius: 50%; position:relative; top:3px" [style.background-color]="isSelected === 'list' ? '#3D5A80' : 'transparent'"><i style="font-size:19px" class="fa fa-list" aria-hidden="true"></i></span></a>
           </li>
         </ul>
-      </div>
+      
     </nav>
 </div>
  <router-outlet></router-outlet>

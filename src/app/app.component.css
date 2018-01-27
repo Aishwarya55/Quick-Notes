@@ -1,13 +1,13 @@
 .app-container{
     padding:0;
     height:100vh;
-    background: #BDD4DE;
+    background: #e0e0e0;
 }
 .header{
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
     -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
     -mox-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.19);
-    background: #2B3A42;
+    background: #293241;
 }
 .header span{
     padding: 16px;
@@ -25,5 +25,5 @@
     top: -4px;
 }
 nav li {
-    padding: 5.5px 12px;
+    padding: 5.5px 5px;
 }

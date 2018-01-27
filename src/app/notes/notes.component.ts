@@ -1,19 +1,19 @@
 import { Component, OnInit, Input,ViewChild, ElementRef } from '@angular/core';
 import {Notes} from './notes';
+import { NoteService } from './note.service'
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.css']
+ 
+
 })
 export class NotesComponent implements OnInit {
   @ViewChild('notepad') notepad:ElementRef;
   @ViewChild('header') header:ElementRef;
   @Input() search: string;
-  notes: Notes = {
-    heading :'Enter your title here',
-    content : 'Enter your text here'
-  };
+  notes : Notes;
   onBlur(type: string): void{
     if(type === "content"){
       console.log(this.notepad.nativeElement.innerHTML);
@@ -57,9 +57,20 @@ export class NotesComponent implements OnInit {
       this.notes.content = this.notes.content.replace(new RegExp( this.search , 'g'), "<span class='highlight'>"+this.search+"</span>");
     }
   }
-  constructor() { }
+
+  constructor(public noteservice: NoteService) {
+    
+  }
+
 
   ngOnInit() {
+    if(this.noteservice.getDisplayNote()!== null && this.noteservice.getDisplayNote() !== undefined)
+      this.notes = this.noteservice.getDisplayNote();
+    else
+      this.notes = {
+        heading :'Enter your title here',
+        content : 'Enter your text here'
+      }
   }
 
 }
