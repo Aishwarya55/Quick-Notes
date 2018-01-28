@@ -1,4 +1,4 @@
-.bar span{
+.icon{
     padding:10px;
     cursor: pointer;
 }
@@ -20,4 +20,24 @@
 }
 .partitions{
     padding:12px
+}
+.dashboardcontainer{
+    max-height: calc(100vh - 54px - 44px);
+    overflow: auto;
+}
+input[type=text]{
+    border-radius: 16px;
+    box-shadow: none;
+    border-width: 0;
+    padding: 1px 10px;
+    border: 1px solid #BDD4DE;
+    background: transparent;
+    padding-right: 30px;
+}
+
+input[type=text]:focus{
+    outline: none;
+    border-color: #EE6c4D;
+    box-shadow: 0 0 8px #EE6c4D;
+    transition: 0.2s ease all;
 }

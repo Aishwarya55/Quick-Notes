@@ -1,7 +1,16 @@
 <div class="container-fluid">
   <div class="row bar">
-    <span (click)="switchView('grid')"><i class="fa fa-th" aria-hidden="true" [style.color]="toggleView === 'grid' ? '#EE6c4D':'#ccc'"></i></span>  
-     <span (click)="switchView('list')"><i class="fa fa-th-list" aria-hidden="true" [style.color]="toggleView === 'list' ? '#EE6c4D':'#ccc'" ></i></span> 
+    <div class="col-md-6">
+      <div class="row">
+        <span class="icon" (click)="switchView('grid')"><i class="fa fa-th" aria-hidden="true" [style.color]="toggleView === 'grid' ? '#EE6c4D':'#ccc'"></i></span> 
+        <span class="icon" (click)="switchView('list')"><i class="fa fa-th-list" aria-hidden="true" [style.color]="toggleView === 'list' ? '#EE6c4D':'#ccc'" ></i></span>
+      </div>
+    </div> 
+    <div class="col-md-6"><i class="fa fa-search pull-right" aria-hidden="true" style="position: relative;
+      top: 15px;left:-32px"></i>
+      <input class="pull-right search-dashboard" type="text" [(ngModel)]="search_dashboard" placeholder="search" style="position: relative;
+      top: 8px;">
+    </div>
   </div>
   <div class="row dashboardcontainer" style="padding:15px">
     <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 partitions" *ngFor="let item of dashboarditems" [hidden]="toggleView === 'list'" (click)="openNote(item)">
