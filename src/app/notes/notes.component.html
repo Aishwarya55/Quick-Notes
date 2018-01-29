@@ -7,7 +7,11 @@
         <div class="col-md-12" style="height:100%">
           <div class="notepad-heading clearfix"><h6 #header contenteditable="true" [innerHtml]="notes.heading" tabindex="-1" (blur)="onBlur('title')" (focus) = "onFocus('title')"></h6></div>
           <div #notepad class="notepad-content clearfix" contenteditable="true" tabindex="-1" (blur)="onBlur('content')" (focus) = "onFocus('content')" [innerHtml]="notes.content">
-            
+          </div>
+          <div class="footer row">
+           <div class="col-md-12"> 
+            <button type="button" class="btn btn-light pull-right" (click)="saveNote()">Done</button>
+            </div>
           </div>
         </div>
       </div> 

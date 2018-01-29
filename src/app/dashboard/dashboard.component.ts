@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DashboardService } from '../dashboard.service'
 import { dashboardContent } from '../dashboardContent'
 import {Router} from '@angular/router';
 import { NoteService } from '../notes/note.service'
-import { Notes } from '../notes/notes'
+import { Notes } from '../notes/notes';
+import { dashboardFilter } from './dashboardFilter'
  
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +16,7 @@ export class DashboardComponent implements OnInit {
 
   dashboarditems: dashboardContent[]
   toggleView : String
-
+   @Input() search_dashboard: string;
   constructor(private router : Router, private dashboardservice : DashboardService, private noteservice : NoteService) {}
 
    getdashboardcontent() : void {

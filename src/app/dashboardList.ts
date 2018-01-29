@@ -1,6 +1,6 @@
 import { dashboardContent } from './dashboardContent'
 
-export const dashboardList : dashboardContent[] = [
+export var dashboardList : dashboardContent[] = [
     { 
     heading: "Welcome",
     content : "Create notes and to-do lists at one place",

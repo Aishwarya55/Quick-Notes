@@ -1,6 +1,8 @@
 import { Component, OnInit, Input,ViewChild, ElementRef } from '@angular/core';
 import {Notes} from './notes';
 import { NoteService } from './note.service'
+import {dashboardList} from  '../dashboardList'
+import {dashboardContent} from '../dashboardContent'
 
 @Component({
   selector: 'app-notes',
@@ -58,9 +60,20 @@ export class NotesComponent implements OnInit {
     }
   }
 
-  constructor(public noteservice: NoteService) {
-    
+  saveNote() : void{
+  var item : dashboardContent = {
+    heading : this.notes.heading,
+    content : this.notes.content,
+    listItem : [],
+    type : 'note'
   }
+  console.log(this.notes.content !== 'Enter your text here');
+
+  if(this.notes.content !== 'Enter your text here' && this.notes.content !== '<br>')
+    dashboardList.push(item);
+  }
+
+  constructor(private noteservice: NoteService) {}
 
 
   ngOnInit() {
