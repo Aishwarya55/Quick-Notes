@@ -1,0 +1,38 @@
+<div class="list-component container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-lg-3">
+    </div>
+    <div class="col-md-6 col-lg-6">
+      <div class="center-div">
+        <div class="col-md-12" style="height:100%">
+          <div class="list-heading clearfix"><h6 #header contenteditable="true" [innerHtml]="list.heading" tabindex="-1"></h6></div>
+          <div class="clearfix item-container">
+            <div class="item-content">
+                <div class="form-group" style="margin-bottom:0">
+                    <div class="item" *ngFor="let item of list.items ; let i = index">
+                        <label style="margin:0">
+                            <input type="checkbox"
+                                   name="items"
+                                   value="{{item}}"
+                                   [checked]="list.completed.indexOf(item) >= 0"
+                                   (change)="updateCheckedOptions(item)"/>
+                            <span [hidden]="item === '__new__'">{{item}}</span>
+                            <input #inputItem type="text" [(ngModel)]="item_new_name" *ngIf="item === '__new__'"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="newItem">
+            <span (click)="addNewItem()">
+              <i style="font-size: 13px;" class="fa fa-plus" aria-hidden="true"></i> Add Item
+            </span>
+          </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <input type="text" [(ngModel)]="search" placeholder="search" (ngModelChange)="searchText()" style="position: relative; top: 16px;">
+    </div>
+  </div>
+</div>

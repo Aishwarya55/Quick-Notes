@@ -6,7 +6,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {dashboardFilter} from './dashboard/dashboardFilter'
+import {dashboardFilter} from './dashboard/dashboardFilter';
+import { ListComponent } from './list/list.component'
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {dashboardFilter} from './dashboard/dashboardFilter'
     AppComponent,
     NotesComponent,
     DashboardComponent,
-    dashboardFilter
+    dashboardFilter,
+    ListComponent
   ],
   imports: [
     BrowserModule,

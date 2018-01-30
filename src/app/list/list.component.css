@@ -1,0 +1,24 @@
+.list-component{
+    height : calc(100% - 54px);
+}
+.center-div{
+    height:87vh;
+    background: #FFF;
+    border-radius: 3px;
+    margin: 16px
+}
+.list-heading{
+    height: 40px;
+    margin: 0 -15px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc
+}
+.item-container{
+    padding: 16px 8px;
+}
+.item, .newItem{
+    padding:8px
+}
+.newItem{
+    cursor: pointer;
+}
