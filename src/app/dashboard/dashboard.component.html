@@ -16,13 +16,21 @@
     <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 partitions" *ngFor="let item of dashboarditems | dashboardFilter: search_dashboard" [hidden]="toggleView === 'list'" (click)="openNote(item)">
       <div class="gridcontent-container clearfix">
         <div class="header">{{item.heading}}</div>
-        <div class="body">{{item.content}}</div>
+        <div class="body">{{item.content}}
+          <div>
+              <div class="list-body" *ngFor="let lists of item.listItem"><i class="fa fa-check-square-o" style="font-size: 16px; color:rgb(238, 108, 77)" [hidden]="lists.completed === false"></i><i class="fa fa-square-o" style="font-size: 16px; color:rgb(238, 108, 77)" [hidden]="lists.completed === true"></i><span>&nbsp;&nbsp;{{lists.item}}</span></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-6 offset-md-3 offset-lg-3 col-lg-6 col-sm-10 offset-sm-1 offset-xs-1 col-xs-10 partitions" *ngFor="let item of dashboarditems | dashboardFilter: search_dashboard" [hidden]="toggleView === 'grid'">
         <div class="gridcontent-container clearfix">
           <div class="header">{{item.heading}}</div>
-          <div class="body">{{item.content}}</div>
+          <div class="body">{{item.content}}
+            <div>
+                <div class="list-body" *ngFor="let lists of item.listItem"><i class="fa fa-check-square-o" style="font-size: 16px; color:rgb(238, 108, 77)" [hidden]="lists.completed === false"></i><i class="fa fa-square-o" style="font-size: 16px; color:rgb(238, 108, 77)" [hidden]="lists.completed === true"></i><span>&nbsp;&nbsp;{{lists.item}}</span></div>
+            </div>
+          </div>
         </div>
       </div>
   </div>

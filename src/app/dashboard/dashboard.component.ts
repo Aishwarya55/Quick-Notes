@@ -5,6 +5,8 @@ import {Router} from '@angular/router';
 import { NoteService } from '../notes/note.service'
 import { Notes } from '../notes/notes';
 import { dashboardFilter } from './dashboardFilter'
+import { list } from '../list/list'
+import { ListService } from '../list/list.service'
  
 @Component({
   selector: 'app-dashboard',
@@ -33,14 +35,18 @@ export class DashboardComponent implements OnInit {
  }
 
  openNote(item :dashboardContent): void{
-  let note : Notes = {
-    heading : item.heading,
-    content : item.content
-  };
-    this.noteservice.setDisplayNote(note)
-    this.router.navigate(['/notes']);
-  console.log(this.noteservice.getDisplayNote(),"lalala");
-  
+   if(item.type === "note"){
+    let note : Notes = {
+      heading : item.heading,
+      content : item.content
+    };
+      this.noteservice.setDisplayNote(note)
+      this.router.navigate(['/notes']);
+    console.log(this.noteservice.getDisplayNote(),"lalala");
+  } else{
+ 
+
+  }
  }
 
   ngOnInit() {

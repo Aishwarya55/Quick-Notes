@@ -2,6 +2,6 @@
  export class dashboardContent  {
     heading : String;
     content: String;
-    listItem : String[];
+    listItem : any;
     type:String
 }
