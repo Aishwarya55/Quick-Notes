@@ -1,5 +1,5 @@
 export class list {
-heading: string;
+heading: String;
 items: any[];
 completed: any[]
 }
