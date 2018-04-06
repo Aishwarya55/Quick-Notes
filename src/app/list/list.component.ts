@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {list} from './list';
+import { ListService } from './list.service'
 
 @Component({
   selector: 'app-list',
@@ -7,11 +8,7 @@ import {list} from './list';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  list: list = {
-    'heading': 'Enter your title here',
-    items: ['OptionA', 'OptionB', 'OptionC'],
-    completed: ['OptionA']
-  }
+  list: list;
   itemsChecked = [];
   @ViewChild('inputItem')
   inputItem: ElementRef;
@@ -32,11 +29,18 @@ export class ListComponent implements OnInit {
     this.inputItem.nativeElement.focus();
   }
 
-  constructor() { }
+  constructor(private listservice : ListService) { }
 
   ngOnInit() {
-
+    if(this.listservice.getDisplayList() !== null && this.listservice.getDisplayList() !== undefined){
+      console.log(this.listservice.getDisplayList(), "list.....")
+      this.list = this.listservice.getDisplayList();
+    } else{
+      this.list = {
+        'heading': 'Enter your title here',
+        items: [],
+        completed: []
+      }
+    }
   }
-
-
 }

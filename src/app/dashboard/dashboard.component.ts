@@ -53,7 +53,9 @@ export class DashboardComponent implements OnInit {
       completed: filter((ele) => ele !== null , map( curr => curr.completed ? curr.item  : null )(item.listItem))
     }
     console.log(new_list)
-    
+    this.listservice.setDisplayList(new_list)
+    console.log(this.listservice.getDisplayList(), "display_list");
+    this.router.navigate(['/list']);
 
   }
  }
